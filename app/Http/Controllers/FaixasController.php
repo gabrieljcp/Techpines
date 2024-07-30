@@ -13,9 +13,10 @@ class FaixasController extends Controller
         return response()->json($faixa, 201);
     }
 
-    public function listarFaixas()
+    public function listarFaixas(Request $request)
     {
-        $faixas = Faixas::all();
+        $album_id = $request->album_id;
+        $faixas = Faixas::where('album_id', $album_id)->get();
         return response()->json($faixas);
     }
 
