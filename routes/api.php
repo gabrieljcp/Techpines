@@ -11,6 +11,7 @@ Route::delete('/albuns/deletar', [AlbunsController::class, 'deletarAlbum']);
 
 Route::post('/faixas/criar', [FaixasController::class, 'criarFaixa']);
 Route::get('/faixas/listar', [FaixasController::class, 'listarFaixas']);
+Route::get('/faixas/todas/listar', [FaixasController::class, 'listarTodasFaixas']);
 Route::get('/faixa/listar', [FaixasController::class, 'listarFaixa']);
 Route::delete('/faixas/deletar', [FaixasController::class, 'deletarFaixa']);
 

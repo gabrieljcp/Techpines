@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Albuns;
 use App\Models\Faixas;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,28 @@ class FaixasController extends Controller
         $faixas = Faixas::where('album_id', $album_id)->get();
         return response()->json($faixas);
     }
+
+    public function listarTodasFaixas()
+    {
+        $faixas = Faixas::all();
+    
+        $albumIds = $faixas->pluck('album_id');
+
+        $albuns = Albuns::whereIn('id', $albumIds)->pluck('name', 'id');
+    
+        $faixas = $faixas->map(function($faixa) use ($albuns) {
+            return [
+                'id' => $faixa->id,
+                'name' => $faixa->name,
+                'album_id' => $faixa->album_id,
+                'album_name' => $albuns[$faixa->album_id] ?? 'Álbum não encontrado'
+            ];
+        });
+    
+        return response()->json($faixas)->header('Content-Type', 'application/json');
+
+    }
+    
 
     public function listarFaixa(Request $request)
     {
