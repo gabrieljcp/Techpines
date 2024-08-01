@@ -11,7 +11,6 @@ class Albuns extends Model
 
     protected $fillable = ['name'];
 
-    // Defina a relação com o modelo Faixa
     public function faixas()
     {
         return $this->hasMany(Faixas::class, 'album_id');

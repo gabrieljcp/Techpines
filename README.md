@@ -64,3 +64,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Documentação Postman
+
+A documentação da API pode ser importada no Postman usando o arquivo de coleção exportado.
+
+### Como Importar a Documentação no Postman
+
+1. Baixe o arquivo de documentação [aqui](./postman/sua_colecao.json).
+2. Abra o Postman.
+3. Clique no botão "Import" no canto superior esquerdo.
+4. Selecione o arquivo `sua_colecao.json` que você baixou.
+5. Clique em "Import".
+
+Agora você deve ver a coleção importada no Postman com todos os endpoints documentados.
