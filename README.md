@@ -71,7 +71,7 @@ A documentação da API pode ser importada no Postman usando o arquivo de coleç
 
 ### Como Importar a Documentação no Postman
 
-1. Baixe o arquivo de documentação [aqui](./postman/sua_colecao.json).
+1. Baixe o arquivo de documentação [aqui](./documentação/Projeto%20Techpines.postman_collection.json).
 2. Abra o Postman.
 3. Clique no botão "Import" no canto superior esquerdo.
 4. Selecione o arquivo `sua_colecao.json` que você baixou.
